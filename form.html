@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+         body {
+      font-family: Arial, sans-serif;
+      background: #f5f5f5;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+      .form {
+      background-image:linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url(pol\ logo.png);
+      padding: 30px;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+      text-align: left;
+      width: 300px;
+    }
+    input[type="email"],
+    input[type="name"],
+    input[type="number"] {
+      width: 90%;
+      padding: 12px;
+      margin: 10px 0;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+    }
+    .logo img {
+      width: 50%;
+      height: 50%;
+      padding: 2px;
+     
+    }
+    .frm {
+        padding: 1px;
+    }
+     .submit {
+      width: 100%;
+      padding: 12px;
+      background-color: #0070ba;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      font-size: 16px;
+      cursor: pointer;
+    }
+    </style>
+</head>
+<body>
+   <div class="form">
+    <div class="logo">
+        <img src="pol logo.png" alt="">
+    </div>
+    <form action="" class="frm" id="frm" >
+           <input type="name" placeholder="Your Name" required><br>
+           <input type="number" placeholder="Your Matric No" ><br>
+            <input type="name" placeholder="Your Email" required><br>
+            <input type="number" placeholder="Your Mobile No" required><br>
+            <br>
+            <input type="hidden" name="_redirect" value="index.html">
+            <textarea name="" id="" cols="35" rows="10" placeholder="MWrite A Message" required></textarea><br>
+            <br>
+            <input type="submit"value="Send Message" class="submit" id="message">
+            </form>
+    </form>
+   </div> 
+
+   <!--  const form = document.getElementById("frm");
+
+   form.addEventListener("submit", function(e) {
+  const inputs = form.querySelectorAll("input[required], textarea[required]");
+  let isValid = true;
+
+  inputs.forEach(input => {
+    if (input.value.trim() === "") {
+      isValid = false;
+    }
+  });
+
+  if (!isValid) {
+    e.preventDefault();
+    alert("Please fill all required fields");
+  } else {
+    alert("Form submitted successfully!");
+  }
+});--> 
+     <script>
+     const form = document.getElementById("frm");
+
+       form.addEventListener("submit", function(e)  {
+        if (!form.checkValidity()) {
+            // Form is NOT complete
+            e.preventDefault(); // stop submission
+        } else {
+            // Form is valid
+            alert("Message Sent.");
+        }
+    });
+
+    </script>
+</body>
+</html>
+

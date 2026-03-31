@@ -1,0 +1,1525 @@
+* {
+    padding: 0;
+    margin: 0;
+    font-family: "Belanosima", sans-serif;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+    text-decoration: none;
+    list-style: none;
+}
+
+
+body {
+  font-family: Arial, sans-serif;
+}
+
+
+
+
+/* Hamburger button */
+.menu-toggle {
+  display: none;
+  font-size: 26px;
+  cursor: pointer;
+}
+
+
+html, body {
+    overflow-x: hidden;
+}
+
+.nav {
+    width: 100%;
+    height: 50px;
+    position: fixed;
+    top: 0;
+    right: 0;
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-image: linear-gradient(to top, black, red, blue, black, purple, white, black);
+    padding: 2% 6%;
+    transition: all .45s ease;
+}
+
+.nav img {
+    width: 100px;
+    height: 100px;
+    padding: 1px 0px;
+}
+
+.top-menu {
+    flex: 1;
+    text-align: right;
+      top: 5px;
+    justify-content: space-around;
+}
+
+
+.top-menu a {
+    display: inline-block;
+    padding: 8px 12px;
+    margin: 0 25px;
+    position: relative;
+    color: white;
+    font-size: 17px;
+    font-weight: 500;
+    transition: all.45s ease;
+}
+
+
+.top-menu a:hover {
+    color: green;
+}
+
+section {
+    padding: 160px 15% 120px;
+}
+
+.home {
+    background-image:linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url(elite.logo.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+      position: relative;
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+   
+}
+
+.show {
+    margin: 100px 0 20px;
+}
+
+.first {
+    display: inline-block;
+    margin: 15px;
+    padding: 0 15px;
+    line-height: 32px;
+    font-size: 20px;
+    font-weight: 500;
+    border-radius: 5px;
+    background-color: blue;
+    color: var(--text-color-one)
+}
+
+.second {
+     display: inline-block;
+    font-size: 20px;
+    font-weight: 500;
+    color: white;
+}
+
+.home-content h1 {
+  line-height: 1.1;
+  margin: 0 0 8px;
+  font-family: "Cookie", cursive;
+  font-weight:1000%;
+  font-size: 500%;
+  font-style: oblique;
+  text-shadow: 0 0 5px rgb(68, 255, 0), 0 0 10px rgb(115, 255, 0), 0 0 #00f;
+}
+
+.home-content h3 {
+    color: white;
+    margin: 0 0 35px;
+    font-size: 3rem;
+    line-height: 1.1;
+    font-weight: 700;
+    text-align: left;
+}
+
+.home-content p {
+    color: white;
+    font-size: var(--p-font);
+    line-height: 1.8;
+    margin-bottom: 40px;
+}
+
+
+
+.text-title {
+    text-align: center;
+}
+
+.text-title h2 {
+    font-size: 100px;
+    color: white;
+}
+
+.players {
+    background-color: black;
+}
+
+.players-content {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, auto));
+    align-items: center;
+    gap: 2.5rem;
+    margin-top: 5rem;
+    overflow-x: clip;
+   
+}
+
+.players-content .row {
+    position: relative;
+    overflow: hidden;
+    cursor: pointer;
+}
+
+.players-content .row img {
+    width: 100%;
+    height: 750px;
+    display: block;
+    border-radius: 8px;
+    border: 16px solid var(--bg-color-two);
+    transition: transform 0.5s;
+}
+
+.players-content .row .cover {
+    width: 100%;
+    height: 0;
+    position: absolute;
+    bottom: 0;
+    overflow: scroll;
+    display: flex;
+    flex-direction: column;   
+    background-image: linear-gradient(rgba(0, 0, 0, 0.7), black); 
+    border-radius: 8px;
+    padding: 0 30px;
+    transition: height 5s;
+
+}
+
+.h {
+    display: flex;
+    justify-content: space-between;
+}
+
+
+
+.players-content .row .cover h5 {
+    font-size: 25px;
+    font-weight: 600;
+    margin: 15px 0; 
+    color: white; 
+}
+
+
+.players-content .row .cover p {
+    color: white;
+    line-height: 1.8;
+}
+
+.players-content .row:hover img {
+    transform: scale(1.1);
+}
+
+.players-content .row:hover .cover {
+  height: 80%;
+}
+
+
+.coaches {
+    display: contents;
+     margin: 0 auto;
+    display: flex;
+    flex: 1;
+    align-items: center;
+   justify-content: space-around;
+}
+
+.coach-content h2 {
+    text-align: center;
+    padding-top: 0%;
+    margin-top: 0%;
+    font-size: 50px;
+    font-family: monospace;
+}
+
+.coach {
+    align-items: center;
+    text-align: center;
+     margin: 0 auto;
+    padding: 0 auto;
+}
+
+.coach h4 {
+    text-align: center;
+    background-color: aqua;
+    border: 1px solid #00f;
+    border-radius: 6px;
+}
+
+.frame {
+   border: 6px solid #333;
+    padding:10px;
+    outline: 5px solid gray;
+      width: 100%;
+    height: 90%;
+    display: flex;
+    border-radius: 100%;
+    border: 16px solid var(--bg-color-two);
+    transition: transform 0.5s;
+    justify-content: space-between;
+    }
+
+    
+
+.game {
+    font-family: Arial, sans-serif;
+    background-image:linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url(elite.logo.png);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+}
+
+.all {
+     background: white;
+     display: flex;
+     flex-direction: column;
+      padding: 50px;
+      border-radius: 10px;
+       animation: box 1s infinite alternate;
+      width: 100%;
+      text-align: left;
+      font-size: 30px;
+     justify-content: center;  
+}
+
+@keyframes box {
+     0% {
+          box-shadow: 0 0 100px white;
+    }
+    25% {
+          box-shadow: 0 0 100px blue;
+    }
+    50% {
+          box-shadow: 0 0 100px yellow;
+    }
+    75% {
+          box-shadow: 0 0 100px green;
+    }
+    100% {
+          box-shadow: 0 0 100px red;
+    }
+}
+
+
+    .logo { 
+
+   margin: 0 auto;
+}
+
+td, th {
+    padding: 20px;
+}
+
+.matches {
+       background-image:linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url(pol\ logo.png);
+       align-items: center;
+}
+
+.amp {
+    color: white;
+   text-align: center;
+   padding: 10px;
+}
+.select {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: white;
+    color: black;
+    padding: 10px 15px;
+}
+.select a {
+    text-decoration: none;
+    color: black;
+}
+.select a:hover {
+    background-color: black;
+    color: white;
+    padding: 5px;
+}
+
+.match {
+     background: black;
+     color: white;
+     display: flex;
+     flex-direction: column;
+      padding: 50px;
+      border-radius: 10px;
+      width: 100%;
+      text-align: center;
+      justify-content: center;
+      font-size: 30px;
+}
+
+.mat {
+    background-color: #36454F;
+    padding: 5px;
+    border-bottom: 5px solid black;
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    }
+
+.homes {
+    width: 40%;
+    text-align: right;
+}
+.score {
+    width: 20%;
+    text-align: center;
+    color: yellow;
+}
+.away {
+    width: 40%;
+    text-align: left;
+}
+
+.a1 {
+  display: flex;
+  color: aqua;
+}
+.a8 {
+      width: 18%;
+    text-align: left;
+    color: aqua;
+}
+
+.gallery {
+    margin: 0 auto;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url(oau\ logo.png);;
+}
+
+h3 {
+    color: white;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 3rem;
+    text-align: center;
+    box-shadow: none;
+    margin-top: 0;
+    margin-bottom: 10px;
+    padding-bottom: 10px;
+    padding-top: 0;
+    animation: glaw 1s infinite alternate;
+}
+
+.galle {
+    display: grid;
+     grid-template-columns: repeat(10, 1fr);
+    
+}
+
+.gal {
+    display: flex;
+}
+
+.gal img {
+    width: 137px;
+    height: 137px;
+
+}
+.match a {
+    text-decoration: none;
+    color: white;
+}
+
+@keyframes glaw {
+    0% {
+          color:  white;
+    }
+    25% {
+          color: blue;
+    }
+    50% {
+          color: yellow;
+    }
+    75% {
+          color: green;
+    }
+    100% {
+          color: red;
+    }
+     
+}
+
+
+
+.footer {
+    background-color: black;
+    color: white;
+    display: grid;
+     grid-template-columns: repeat(2, 1fr)
+}
+
+.foote {
+    background-color: black;
+    color: white;
+   
+}
+
+.con {
+    display: flex;
+    justify-content: space-around;
+    margin-left: 0 ;
+    width: 50%;
+    border-radius: 7px;
+    border: 2px solid white;
+    padding: 1px;
+}
+
+tr img {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+}
+.ads h3 {
+    font-size: 20px;
+}
+
+.bt {
+    color: white;
+}
+.bt {
+    border-radius: 5px;
+}
+
+.cn a {
+    color: yellow;
+}
+
+.conme {
+    background-color: white;
+    color: black;
+    width: 30%;
+    padding: 10px;
+    border-radius: 15px
+}
+
+.ads h3 {
+    text-align: left;
+}
+
+.goal {
+    padding: 20px;
+}
+
+.tcon {
+    display: flex;
+    justify-content: space-between;
+}
+.form {
+    display: inline;
+    text-align: center;
+    justify-content: space-around;
+    margin-left: 0 ;
+    width: 30%;
+    border-radius: 7px;
+    border: 2px solid blue;
+    padding: 7px;
+}
+.fo {
+    width: 50px;
+    border-radius: 50%;
+    height: 50px;
+    background-color: red;
+    animation: rd 5s infinite alternate;
+}
+
+@keyframes rd {
+     50% {
+         background-color: yellow;
+    }
+    75% {
+          background-color: green;
+    }
+    100% {
+         background-color: red;
+    }
+     
+}
+.fo a {
+    color: white;
+}
+
+h5 {
+    text-align: center;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media (min-width: 360px) {
+    .nav img {
+    width: 35px;
+    height: 40px;
+    padding: 1px 0px;
+    justify-items: left;
+}
+.nav {
+    display: flex;
+    justify-content: space-between;
+}
+.top-menu a {
+    display: flex;
+    padding: 8px 12px;
+    margin: 15px 0;
+    position: relative;
+    color: white;
+    font-size: 15px;
+    font-weight: 200;
+    transition: all.45s ease;
+}
+  .menu-toggle {
+    display: block;
+    color: white;
+  }
+ .top-menu {
+    position: absolute;
+    top: 60px;
+    right: 0;
+    background: #222;
+    width: 100%;
+    flex-direction: column;
+     flex: 1;
+    text-align: right;
+        /* Hidden by default */
+    display: none;
+  }
+  /* Show menu when active */
+ 
+.home {
+      position: relative;
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+   
+}
+
+.show {
+    margin: 30px 0 20px;
+}
+
+.home-content h1 {
+  font-weight:1000%;
+  font-size:300%;
+}
+
+.home-content h3 {
+      font-size: 1.7rem;
+    text-align: left;
+}
+
+.text-title h2 {
+    font-size: 55px;
+}
+
+.players-content .row img {
+    width: 70%;
+    height: 550px;
+    display: block;
+    border-radius: 8px;
+    border: 16px solid var(--bg-color-two);
+    transition: transform 0.5s;
+}
+
+.players-content .row .cover {
+    width:72.5%;
+    height: 0;
+    position: absolute;
+    bottom: 0;
+    overflow: scroll;
+    display: flex;
+    flex-direction: column;   
+    background-image: linear-gradient(rgba(0, 0, 0, 0.7), black); 
+    border-radius: 8px;
+    padding: 0 5px;
+    transition: height 5s;
+
+}
+.all img {
+    height: 75px;
+}
+
+td, th {
+    padding: 8px;
+    font-size: 15px;
+}
+.matches {
+    padding:30px;
+}
+.amp {
+    font-size: 17px;
+}
+.match {
+      padding: 15px;
+      font-size: 13px;
+}
+.select {
+    font-size: 12px;
+}
+.mat {
+    padding: 7px;
+    border-bottom: 2px solid black;
+    display: flex;
+    justify-content: space-between;
+    font-size: 0.7rem;
+    
+}
+.a3 {
+     display: inline;   
+    justify-content: space-between; 
+    padding: 5px;
+}
+
+.homes {
+    width: 35%;
+    text-align: right;
+}
+.score {
+    width: 17%;
+    text-align: center;
+}
+.away {
+    width: 35%;
+    text-align: left;
+}
+
+.a1 {
+  display: flex;
+}
+.a8 {
+      width: 24%;
+    text-align: left;
+    font-size: 0.7rem;
+    align-items: center;
+}
+.matches {
+       background-image:linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url(oau\ logo.png);
+   
+}
+.gallery {
+    margin: 0 auto;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url(pol\ logo.png);;
+}
+h3 {
+    color: white;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 3rem;
+    text-align: center;
+    margin-top: 0;
+    padding-top: 0;
+     animation: glaw 2s infinite alternate;
+}
+.galle {
+    display: grid;
+     grid-template-columns: repeat(4, 1fr);
+}
+.gal img {
+    width: 64px;
+    height: 64px;
+}
+.footer {
+    background-color: black;
+    color: white;
+    margin: 0 auto;
+    display: inline-block;
+    padding:10px;
+    align-items: center;
+    justify-content: center;
+}
+.goal {
+    padding:3px;
+}
+.tables td, th {
+    font-size: 10px;
+    padding: 5px;
+}
+.con {
+   width: 70%;
+}
+#top-menu {
+    display: none;
+    overflow: hidden;
+    transition: 0.1s;
+}
+#top-menu.active {
+    display: block;
+}
+.conme {
+    width: 80%;
+    padding: 5px;
+}
+}
+
+
+
+
+
+
+
+
+@media (min-width: 480px) {
+    .nav img {
+    width: 30px;
+    height: 40px;
+    padding: 1px 0px;
+    justify-items: left;
+}
+.nav {
+    display: flex;
+    justify-content: space-between;
+}
+.top-menu a {
+    display: flex;
+    padding: 8px 12px;
+    margin: 15px 0;
+    position: relative;
+    color: white;
+    font-size: 15px;
+    font-weight: 200;
+    transition: all.45s ease;
+}
+  .menu-toggle {
+    display: block;
+    color: white;
+  }
+ .top-menu {
+    position: absolute;
+    top: 60px;
+    right: 0;
+    background: #222;
+    width: 100%;
+    flex-direction: column;
+     flex: 1;
+    text-align: right;
+        /* Hidden by default */
+    display: none;
+  }
+  /* Show menu when active */
+ 
+.home {
+      position: relative;
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+   
+}
+
+.show {
+    margin: 30px 0 20px;
+}
+
+.home-content h1 {
+  font-weight:1000%;
+  font-size:400%;
+}
+
+.home-content h3 {
+      font-size: 2.3rem;
+    text-align: left;
+}
+
+.text-title h2 {
+    font-size: 65px;
+}
+
+.players-content .row img {
+    width: 100%;
+    height: 650px;
+}
+.all img {
+    height: 70px;
+}
+
+td, th {
+    padding: 10px;
+    font-size: 15px;
+}
+.matches {
+    padding:30px;
+}
+.match {
+      padding: 20px;
+      font-size: 15px;
+}
+.mat {
+    padding: 5px;
+    border-bottom:3px solid black;
+    display: flex;
+    justify-content: space-between;
+    
+}
+.a3 {
+     display: inline;   
+    justify-content: space-between; 
+    padding: 5px;
+}
+
+.homes {
+    width: 35%;
+    text-align: right;
+}
+.score {
+    width: 17%;
+    text-align: center;
+}
+.away {
+    width: 35%;
+    text-align: left;
+}
+
+.a1 {
+  display: flex;
+}
+.a8 {
+      width: 22%;
+    text-align: left;
+    font-size: 0.8rem;
+    align-items: center;
+}
+.matches {
+       background-image:linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url(oau\ logo.png);
+   
+}
+.gallery {
+    margin: 0 auto;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url(pol\ logo.png);;
+}
+h3 {
+    color: white;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 3rem;
+    text-align: center;
+    margin-top: 0;
+    padding-top: 0;
+     animation: glaw 2s infinite alternate;
+}
+.galle {
+    display: grid;
+     grid-template-columns: repeat(4, 1fr);
+}
+.gal img {
+    width: 85px;
+    height: 85px;
+}
+.footer {
+    background-color: black;
+    color: white;
+    margin: 0 auto;
+    display: inline-block;
+    padding: 15px;
+    align-items: center;
+    justify-content: center;
+}
+.goal {
+    padding: 5px;
+}
+.tables td, th {
+    font-size: 13px;
+}
+.con {
+    padding: 4px;
+}
+.fo {
+    width: 30px;
+    height: 35px;
+}
+#top-menu {
+    display: none;
+    overflow: hidden;
+    transition: 0.1s;
+}
+#top-menu.active {
+    display: block;
+}
+.conme {
+    width: 59%;
+    padding: 5px;
+}
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media (min-width: 600px) {
+    .nav img {
+    width: 40px;
+    height: 50px;
+    padding: 1px 0px;
+    justify-items: left;
+}
+.conme {
+    background-color: white;
+    color: black;
+    width: 45%;
+    padding: 10px;
+    border-radius: 15px
+}
+.nav {
+    display: flex;
+    justify-content: space-between;
+}
+.top-menu a {
+    display: flex;
+    padding: 8px 12px;
+    margin: 15px 0;
+    position: relative;
+    color: white;
+    font-size: 15px;
+    font-weight: 200;
+    transition: all.45s ease;
+}
+  .menu-toggle {
+    display: block;
+    color: white;
+  }
+ .top-menu {
+    position: absolute;
+    top: 60px;
+    right: 0;
+    background: #222;
+    width: 100%;
+    flex-direction: column;
+     flex: 1;
+    text-align: right;
+        /* Hidden by default */
+    display: none;
+  }
+  /* Show menu when active */
+  
+
+
+
+.coaches {
+    display: inline;
+      margin: 0 auto;
+    
+    flex: 1;
+}
+
+
+.frame {
+   border: 6px solid #333;
+    padding:10px;
+    outline: 5px solid gray;
+      width: 100%;
+    height: 90%;
+    display: flex;
+    border-radius: 100%;
+    border: 16px solid var(--bg-color-two);
+    transition: transform 0.5s;
+}
+ 
+.coach-content h3 {
+    text-align: center;
+    padding-top: 1px;
+    margin-top: 1px;
+    font-size: 50px;
+    font-family: monospace;
+}
+.all {
+    background: white;
+     display: flex;
+     flex-direction: column;
+      padding: 20px;
+      border-radius: 10px;
+      animation: box 0.5s infinite alternate;
+      width: 100%;
+      text-align: left;
+      font-size: 30px;
+     justify-content: center;  
+}
+
+
+
+td, th {
+    padding: 10px;
+}
+.match {
+     background: black;
+     color: white;
+     display: flex;
+     flex-direction: column;
+      padding: 50px;
+      border-radius: 10px;
+      width: 100%;
+      text-align: center;
+      justify-content: center;
+      font-size: 15px;
+}
+.mat {
+    padding: 5px;
+    border-bottom: 4px solid black;
+    display: flex;
+    justify-content: space-between;
+    
+}
+.a3 {
+     display: inline;   
+    justify-content: space-between; 
+    padding: 5px;
+}
+
+.homes {
+    width: 35%;
+    text-align: right;
+}
+.score {
+    width: 17%;
+    text-align: center;
+}
+.away {
+    width: 35%;
+    text-align: left;
+}
+
+.a1 {
+  display: flex;
+}
+.a8 {
+      width: 24%;
+    text-align: left;
+    font-size: 0.8rem;
+    align-items: center;
+}
+.matches {
+       background-image:linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url(oau\ logo.png);
+   
+}
+.gallery {
+    margin: 0 auto;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url(pol\ logo.png);;
+}
+h3 {
+    color: white;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 3rem;
+    text-align: center;
+    margin-top: 0;
+    padding-top: 0;
+     animation: glaw 2s infinite alternate;
+}
+.galle {
+    display: grid;
+     grid-template-columns: repeat(4, 1fr);
+}
+.gal img {
+    width: 110px;
+    height: 110px;
+}
+.footer {
+    background-color: black;
+    color: white;
+    margin: 0 auto;
+    display: inline-block;
+    padding: 20px;
+    align-items: center;
+    justify-content: center;
+}
+.goal {
+    padding: 20px;
+}
+.conme {
+    width: 50%;
+}
+
+#top-menu {
+    display: none;
+    overflow: hidden;
+    transition: 0.1s;
+}
+#top-menu.active {
+    display: block;
+}
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media (min-width: 768px) {
+    .nav img {
+    width: 50px;
+    height: 60px;
+    padding: 1px 0px;
+    justify-items: left;
+}
+.conme {
+    background-color: white;
+    color: black;
+    width: 45%;
+    padding: 10px;
+    border-radius: 15px
+}
+.nav {
+    display: flex;
+    justify-content: space-between;
+}
+.top-menu a {
+    display: flex;
+    padding: 8px 12px;
+    margin: 15px 0;
+    position: relative;
+    color: white;
+    font-size: 15px;
+    font-weight: 200;
+    transition: all.45s ease;
+}
+  .menu-toggle {
+    display: block;
+    color: white;
+  }
+ .top-menu {
+    position: absolute;
+    top: 60px;
+    right: 0;
+    background: #222;
+    width: 100%;
+    flex-direction: column;
+     flex: 1;
+    text-align: right;
+        /* Hidden by default */
+    display: none;
+  }
+  /* Show menu when active */
+  
+
+
+
+.coaches {
+    display: inline;
+      margin: 0 auto;
+    
+    flex: 1;
+}
+
+
+.frame {
+   border: 6px solid #333;
+    padding:10px;
+    outline: 5px solid gray;
+      width: 100%;
+    height: 90%;
+    display: flex;
+    border-radius: 100%;
+    border: 16px solid var(--bg-color-two);
+    transition: transform 0.5s;
+}
+ 
+.coach-content h3 {
+    text-align: center;
+    padding-top: 1px;
+    margin-top: 1px;
+    font-size: 50px;
+    font-family: monospace;
+}
+.all {
+    background: white;
+     display: flex;
+     flex-direction: column;
+      padding: 20px;
+      border-radius: 10px;
+      animation: box 0.5s infinite alternate;
+      width: 100%;
+      text-align: left;
+      font-size: 30px;
+     justify-content: center;  
+}
+
+
+td, th {
+    padding: 10px;
+}
+.match {
+     background: black;
+     color: white;
+     display: flex;
+     flex-direction: column;
+      padding: 50px;
+      border-radius: 10px;
+      width: 100%;
+      text-align: center;
+      justify-content: center;
+      font-size: 15px;
+}
+.mat {
+    padding: 5px;
+    border-bottom: 5px solid black;
+    display: flex;
+    justify-content: space-between;
+    
+}
+.a3 {
+     display: inline;   
+    justify-content: space-between; 
+    padding: 5px;
+}
+
+.homes {
+    width: 35%;
+    text-align: right;
+}
+.score {
+    width: 17%;
+    text-align: center;
+}
+.away {
+    width: 35%;
+    text-align: left;
+}
+
+.a1 {
+  display: flex;
+}
+.a8 {
+      width: 22%;
+    text-align: left;
+    font-size: 0.8rem;
+    align-items: center;
+}
+.matches {
+       background-image:linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url(oau\ logo.png);
+   
+}
+.gallery {
+    margin: 0 auto;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url(pol\ logo.png);;
+}
+h3 {
+    color: white;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 3rem;
+    text-align: center;
+    margin-top: 0;
+    padding-top: 0;
+     animation: glaw 2s infinite alternate;
+}
+.galle {
+    display: grid;
+     grid-template-columns: repeat(4, 1fr);
+}
+.gal img {
+    width: 110px;
+    height: 110px;
+}
+.footer {
+    background-color: black;
+    color: white;
+    margin: 0 auto;
+    display: inline-block;
+    padding: 20px;
+    align-items: center;
+    justify-content: center;
+}
+.goal {
+    padding: 20px;
+}
+#top-menu {
+    display: none;
+    overflow: hidden;
+    transition: 0.1s;
+}
+#top-menu.active {
+    display: block;
+}
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

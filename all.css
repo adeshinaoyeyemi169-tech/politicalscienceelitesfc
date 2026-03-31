@@ -1,0 +1,232 @@
+html, body {
+    overflow-x: hidden;
+}
+
+    .matches {
+       background-image:linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url(pol\ logo.png);
+       align-items: center;
+       margin: 0 auto;
+}
+
+.amp {
+    color: white;
+   text-align: center;
+   padding: 10px;
+}
+.select {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: white;
+    color: black;
+    padding: 10px 15px;
+}
+.select a {
+    text-decoration: none;
+    color: black;
+}
+.select a:hover {
+    background-color: black;
+    color: white;
+    padding: 5px;
+}
+
+.match {
+     background: black;
+     color: white;
+     display: flex;
+     flex-direction: column;
+      padding: 50px;
+      border-radius: 10px;
+      width: 100%;
+      text-align: center;
+      justify-content: center;
+      font-size: 30px;
+}
+
+.mat {
+    background-color: #36454F;
+    padding: 5px;
+    border-bottom: 1px solid black;
+    display: flex;
+    justify-content: space-between;
+    width: 93.5%;
+    }
+
+.homes {
+    width: 40%;
+    text-align: right;
+}
+.score {
+    width: 20%;
+    text-align: center;
+    color: yellow;
+}
+.away {
+    width: 40%;
+    text-align: left;
+}
+
+.a1 {
+  display: flex;
+  color: aqua;
+}
+.a8 {
+      width: 18%;
+    text-align: left;
+    color: aqua;
+}
+
+.game {
+    font-family: Arial, sans-serif;
+    background-image:linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url(elite.logo.png);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+}
+
+.all {
+     background: white;
+     display: flex;
+     flex-direction: column;
+      padding: 50px;
+      border-radius: 10px;
+      width: 100%;
+      text-align: left;
+      font-size: 30px;
+     justify-content: center;  
+}
+.table {
+    border-collapse: collapse;
+}
+
+td, th {
+    padding: 20px;
+}
+
+@media   (max-width: 768px) { 
+  .match {
+     background: black;
+     color: white;
+     display: flex;
+     flex-direction: column;
+      padding: 50px;
+      border-radius: 10px;
+      width: 100%;
+      text-align: center;
+      justify-content: center;
+      font-size: 20px;
+}
+.mat {
+    background-color: #36454F;
+    padding: 7px;
+    border-bottom: 1px solid black;
+    display: flex;
+    justify-content: space-between;
+    width: 83%;
+    
+    }
+    .a8 {
+      width: 23%;
+    text-align: left;
+    color: aqua;
+}
+}
+
+
+
+
+
+
+
+
+
+
+
+
+@media (max-width: 480px) { 
+    .amp {
+        font-size: 17px;
+    }
+  .match {
+      padding: 35px;
+      border-radius: 10px;
+      width: 90%;
+      font-size: 15px;
+}
+.mat {
+    background-color: #36454F;
+    padding: 5px;
+    border-bottom: 10px solid black;
+    display: flex;
+    justify-content: space-between;
+    width: 90%;
+    
+    }
+    .a8 {
+      width: 25%;
+    text-align: left;
+    color: aqua;
+}
+td, th {
+    padding: 10px;
+    font-size: 20px;
+}
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media (max-width: 360px) { 
+    .amp {
+        font-size: 12.5px;
+    }
+  .match {
+      padding: 30px;
+      border-radius: 10px;
+      width: 878;
+      font-size: 13px;
+}
+.mat {
+    background-color: #36454F;
+    padding: 4px;
+    border-bottom: 10px solid black;
+    display: flex;
+    justify-content: space-between;
+    width: 90%;
+    
+    }
+    .a8 {
+      width: 29%;
+    text-align: left;
+    color: aqua;
+}
+td, th {
+    padding: 8px;
+    font-size: 18px;
+}
+caption {
+    font-size: 20px;
+}
+}
+
+
+
+
+
+
+
+
+
+
