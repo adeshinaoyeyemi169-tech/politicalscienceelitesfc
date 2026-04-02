@@ -7,9 +7,12 @@
     text-decoration: none;
     list-style: none;
 }
+
+
 body {
   font-family: Arial, sans-serif;
 }
+
 
 /* Hamburger button */
 .menu-toggle {
@@ -17,6 +20,7 @@ body {
   font-size: 26px;
   cursor: pointer;
 }
+
 
 html, body {
     overflow-x: hidden;
@@ -46,8 +50,9 @@ html, body {
 .top-menu {
     flex: 1;
     text-align: right;
-      top: 5px;
+    top: 5px;
     justify-content: space-around;
+    display: flex;
 }
 
 
@@ -76,7 +81,7 @@ section {
     background-size: contain;
     background-repeat: no-repeat;
     background-position: center;
-      position: relative;
+    position: relative;
     height: 100vh;
     width: 100%;
     display: flex;
@@ -97,24 +102,25 @@ section {
     font-weight: 500;
     border-radius: 5px;
     background-color: blue;
-    color: var(--text-color-one)
+    color: white;
 }
 
 .second {
-     display: inline-block;
+    display: inline-block;
     font-size: 20px;
     font-weight: 500;
     color: white;
 }
 
 .home-content h1 {
-  line-height: 1.1;
-  margin: 0 0 8px;
-  font-family: "Cookie", cursive;
-  font-weight:1000%;
-  font-size: 500%;
-  font-style: oblique;
-  text-shadow: 0 0 5px rgb(68, 255, 0), 0 0 10px rgb(115, 255, 0), 0 0 #00f;
+   line-height: 1.1;
+   margin: 0 0 8px;
+   font-family: "Cookie", cursive;
+   font-weight:1000%;
+   color: white;
+   font-size: 550%;
+   font-style: oblique;
+   text-shadow: 0 0 10px yellow, 0 0 10px blue, 0 0 10px yellow;
 }
 
 .home-content h3 {
@@ -132,7 +138,6 @@ section {
     line-height: 1.8;
     margin-bottom: 40px;
 }
-
 
 
 .text-title {
@@ -213,19 +218,21 @@ section {
 }
 
 .players-content .row:hover .cover {
-  height: 80%;
+    height: 80%;
 }
 
 
 .coaches {
-    display: contents;
-     margin: 0 auto;
+    display: flex;
+    margin: 0 auto;
     display: flex;
     flex: 1;
     align-items: center;
-   justify-content: space-around;
+    justify-content: space-between;
 }
-
+.coach-content {
+    padding: 50px;
+}
 .coach-content h2 {
     text-align: center;
     padding-top: 0%;
@@ -235,10 +242,14 @@ section {
 }
 
 .coach {
-    align-items: center;
-    text-align: center;
-     margin: 0 auto;
-    padding: 0 auto;
+   align-items: center;
+   text-align: center;
+   margin: 0 auto;
+   padding: 0 70px;
+}
+.coach img {
+    width: 100%;
+    height: auto;
 }
 
 .coach h4 {
@@ -250,15 +261,15 @@ section {
 
 .frame {
    border: 6px solid #333;
-    padding:10px;
-    outline: 5px solid gray;
-      width: 100%;
-    height: 90%;
-    display: flex;
-    border-radius: 100%;
-    border: 16px solid var(--bg-color-two);
-    transition: transform 0.5s;
-    justify-content: space-between;
+   padding:10px;
+   outline: 5px solid gray;
+   width: 100%;
+   height: 90%;
+   display: flex;
+   border-radius: 100%;
+   border: 16px solid var(--bg-color-two);
+   transition: transform 0.5s;
+   justify-content: space-between;
     }
 
     
@@ -346,12 +357,12 @@ td, th {
      color: white;
      display: flex;
      flex-direction: column;
-      padding: 50px;
-      border-radius: 10px;
-      width: 100%;
-      text-align: center;
-      justify-content: center;
-      font-size: 30px;
+     padding: 50px;
+     border-radius: 10px;
+     width: 100%;
+     text-align: center;
+     justify-content: center;
+     font-size: 30px;
 }
 
 .mat {
@@ -408,7 +419,6 @@ h3 {
 .galle {
     display: grid;
      grid-template-columns: repeat(10, 1fr);
-    
 }
 
 .gal {
@@ -602,7 +612,7 @@ h5 {
     background: #222;
     width: 100%;
     flex-direction: column;
-     flex: 1;
+    flex: 1;
     text-align: right;
         /* Hidden by default */
     display: none;
@@ -610,12 +620,11 @@ h5 {
   /* Show menu when active */
  
 .home {
-      position: relative;
+    position: relative;
     height: 100vh;
     width: 100%;
     display: flex;
     justify-content: center;
-   
 }
 
 .show {
@@ -623,12 +632,12 @@ h5 {
 }
 
 .home-content h1 {
-  font-weight:1000%;
-  font-size:300%;
+    font-weight:1000%;
+    font-size:300%;
 }
 
 .home-content h3 {
-      font-size: 1.7rem;
+    font-size: 1.7rem;
     text-align: left;
 }
 
@@ -638,7 +647,7 @@ h5 {
 
 .players-content .row img {
     width: 70%;
-    height: 550px;
+    height: 530px;
     display: block;
     border-radius: 8px;
     border: 16px solid var(--bg-color-two);
@@ -659,8 +668,24 @@ h5 {
     transition: height 5s;
 
 }
+.coaches {
+    display: inline;
+}
+.coach {
+   align-items: center;
+   text-align: center;
+   margin: 0 auto;
+   padding: 0 20px;
+}
+.coach img {
+    width: 100%;
+    height: auto;
+}
+.all {
+    padding: 15px
+}
 .all img {
-    height: 75px;
+    height: 70px;
 }
 
 td, th {
@@ -768,6 +793,10 @@ h3 {
 #top-menu.active {
     display: block;
 }
+.con {
+    padding: 10px;
+    width:603;
+}
 .conme {
     width: 80%;
     padding: 5px;
@@ -813,7 +842,7 @@ h3 {
     background: #222;
     width: 100%;
     flex-direction: column;
-     flex: 1;
+    flex: 1;
     text-align: right;
         /* Hidden by default */
     display: none;
@@ -821,7 +850,7 @@ h3 {
   /* Show menu when active */
  
 .home {
-      position: relative;
+    position: relative;
     height: 100vh;
     width: 100%;
     display: flex;
@@ -834,23 +863,22 @@ h3 {
 }
 
 .home-content h1 {
-  font-weight:1000%;
-  font-size:400%;
+    font-weight:1000%;
+    font-size:400%;
 }
 
 .home-content h3 {
-      font-size: 2.3rem;
+    font-size: 2.3rem;
     text-align: left;
 }
 
 .text-title h2 {
     font-size: 65px;
 }
-
-.players-content .row img {
-    width: 100%;
-    height: 650px;
+.all {
+    padding: 30px;
 }
+
 .all img {
     height: 70px;
 }
@@ -863,8 +891,20 @@ td, th {
     padding:30px;
 }
 .match {
-      padding: 20px;
-      font-size: 15px;
+    padding: 20px;
+    font-size: 15px;
+}
+.players-content .row img {
+    width: 100%;
+    height: 750px;
+}
+
+.players-content .row .cover {
+    width: 100%;
+    height: 0;
+}
+.coach-content {
+    display: inline;
 }
 .mat {
     padding: 5px;
@@ -874,7 +914,7 @@ td, th {
     
 }
 .a3 {
-     display: inline;   
+    display: inline;   
     justify-content: space-between; 
     padding: 5px;
 }
@@ -893,16 +933,16 @@ td, th {
 }
 
 .a1 {
-  display: flex;
+    display: flex;
 }
 .a8 {
-      width: 22%;
+    width: 22%;
     text-align: left;
     font-size: 0.8rem;
     align-items: center;
 }
 .matches {
-       background-image:linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url(oau\ logo.png);
+    background-image:linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url(oau\ logo.png);
    
 }
 .gallery {
@@ -916,11 +956,11 @@ h3 {
     text-align: center;
     margin-top: 0;
     padding-top: 0;
-     animation: glaw 2s infinite alternate;
+    animation: glaw 2s infinite alternate;
 }
 .galle {
     display: grid;
-     grid-template-columns: repeat(4, 1fr);
+    grid-template-columns: repeat(4, 1fr);
 }
 .gal img {
     width: 85px;
@@ -953,6 +993,9 @@ h3 {
     overflow: hidden;
     transition: 0.1s;
 }
+.con {
+    width: 60%;
+}
 #top-menu.active {
     display: block;
 }
@@ -961,23 +1004,6 @@ h3 {
     padding: 5px;
 }
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -1033,29 +1059,36 @@ h3 {
     background: #222;
     width: 100%;
     flex-direction: column;
-     flex: 1;
+    flex: 1;
     text-align: right;
         /* Hidden by default */
     display: none;
   }
   /* Show menu when active */
   
+.players-content .row img {
+    width: 100%;
+    height: 750px;
+}
 
+.players-content .row .cover {
+    width: 100%;
+    height: 0;
+}
 
 
 .coaches {
     display: inline;
-      margin: 0 auto;
-    
+    margin: 0 auto;
     flex: 1;
 }
 
 
 .frame {
-   border: 6px solid #333;
+    border: 6px solid #333;
     padding:10px;
     outline: 5px solid gray;
-      width: 100%;
+    width: 100%;
     height: 90%;
     display: flex;
     border-radius: 100%;
@@ -1072,19 +1105,16 @@ h3 {
 }
 .all {
     background: white;
-     display: flex;
-     flex-direction: column;
-      padding: 20px;
-      border-radius: 10px;
-      animation: box 0.5s infinite alternate;
-      width: 100%;
-      text-align: left;
-      font-size: 30px;
-     justify-content: center;  
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    border-radius: 10px;
+    animation: box 0.5s infinite alternate;
+    width: 100%;
+    text-align: left;
+    font-size: 30px;
+    justify-content: center;  
 }
-
-
-
 td, th {
     padding: 10px;
 }
@@ -1093,12 +1123,12 @@ td, th {
      color: white;
      display: flex;
      flex-direction: column;
-      padding: 50px;
-      border-radius: 10px;
-      width: 100%;
-      text-align: center;
-      justify-content: center;
-      font-size: 15px;
+     padding: 50px;
+     border-radius: 10px;
+     width: 100%;
+     text-align: center;
+     justify-content: center;
+     font-size: 15px;
 }
 .mat {
     padding: 5px;
@@ -1127,16 +1157,16 @@ td, th {
 }
 
 .a1 {
-  display: flex;
+    display: flex;
 }
 .a8 {
-      width: 24%;
+    width: 24%;
     text-align: left;
     font-size: 0.8rem;
     align-items: center;
 }
 .matches {
-       background-image:linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url(oau\ logo.png);
+    background-image:linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url(oau\ logo.png);
    
 }
 .gallery {
@@ -1150,11 +1180,11 @@ h3 {
     text-align: center;
     margin-top: 0;
     padding-top: 0;
-     animation: glaw 2s infinite alternate;
+    animation: glaw 2s infinite alternate;
 }
 .galle {
     display: grid;
-     grid-template-columns: repeat(4, 1fr);
+    grid-template-columns: repeat(4, 1fr);
 }
 .gal img {
     width: 110px;
@@ -1171,6 +1201,9 @@ h3 {
 }
 .goal {
     padding: 20px;
+}
+.con {
+    width:60%
 }
 .conme {
     width: 50%;
@@ -1205,83 +1238,12 @@ h3 {
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 @media (min-width: 768px) {
     .nav img {
     width: 50px;
-    height: 60px;
+    height: 70px;
     padding: 1px 0px;
     justify-items: left;
-}
-.conme {
-    background-color: white;
-    color: black;
-    width: 45%;
-    padding: 10px;
-    border-radius: 15px
 }
 .nav {
     display: flex;
@@ -1308,29 +1270,33 @@ h3 {
     background: #222;
     width: 100%;
     flex-direction: column;
-     flex: 1;
+    flex: 1;
     text-align: right;
         /* Hidden by default */
     display: none;
   }
   /* Show menu when active */
-  
+  .players-content .row img {
+    width: 100%;
+    height: 770px;
+}
 
-
-
+.players-content .row .cover {
+    width: 100%;
+    height: 0;
+}
 .coaches {
     display: inline;
-      margin: 0 auto;
-    
+    margin: 0 auto;
     flex: 1;
 }
 
 
 .frame {
-   border: 6px solid #333;
+    border: 6px solid #333;
     padding:10px;
     outline: 5px solid gray;
-      width: 100%;
+    width: 100%;
     height: 90%;
     display: flex;
     border-radius: 100%;
@@ -1446,6 +1412,13 @@ h3 {
 .goal {
     padding: 20px;
 }
+.conme {
+    background-color: white;
+    color: black;
+    width: 45%;
+    padding: 10px;
+    border-radius: 15px
+}
 #top-menu {
     display: none;
     overflow: hidden;
@@ -1467,53 +1440,178 @@ h3 {
 
 
 
+@media (min-width: 1024px) {
+
+body {
+  font-family: Arial, sans-serif;
+}
 
 
+/* Hamburger button */
+.menu-toggle {
+  display: none;
+}
 
 
+html, body {
+   overflow-x: hidden;
+}
+.nav img {
+    width: 90px;
+    height: 90px;
+    padding: 1px 0px;
+}
+
+.top-menu {
+    display: inline-block !important;
+    background: none;
+    flex-direction: row;
+    position: static;
+    text-align: right;
+    top: 5px;
+    justify-content: space-between;
+    align-items: center;
+}
+.top-menu a {
+    display: inline-block;
+    color: white;
+}
+.top-menu a:hover {
+    color: green;
+}
+
+section {
+    padding: 160px 15% 120px;
+}
+
+.players-content .row img {
+    width: 100%;
+    height: 770px;
+}
+
+.players-content .row .cover {
+    width: 100%;
+    height: 0;
+}
+
+.coaches {
+   display: contents;
+   margin: 0 30px;
+   display: flex;
+   flex: 1;
+   align-items: center;
+   justify-content: space-around;
+}
+.coach {
+   align-items: center;
+   text-align: center;
+   margin: 0 auto;
+   padding: 0 70px;
+}
+.coach img {
+    width: 100%;
+    height: auto;
+    padding: 30px;
+}
+.coach h4 {
+    text-align: center;
+    background-color: aqua;
+    border: 1px solid #00f;
+    border-radius: 6px;
+}
+.amp {
+    font-size:35px ;
+}
+.matches {
+    padding: 0 250px
+}
+.select a:hover {
+    background-color: black;
+    color: white;
+    padding: 5px;
+}
+
+.match {
+    padding: 40px;
+}
+
+.mat {
+    padding: 15px;    
+}
+
+.homes {
+    font-size: 20px;
+}
+.score {
+    font-size: 20px;
+}
+.away {
+    font-size: 20px;
+}
+
+.a1 {
+    font-size: 20px;
+}
+.a8 {
+    font-size: 17px;
+    width: 25%;
+}
+
+.galle {
+    grid-template-columns: repeat(10, 1fr);    
+}
 
 
+.gal img {
+    width: 75px;
+    height: 105px;
 
+}
+.footer {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr)
+}
+.con {
+    margin-left: 0 ;
+    width: 50%;
+    padding: 1px;
+}
+.ads h3 {
+    font-size: 20px;
+}
 
+.bt {
+    color: white;
+}
+.bt {
+    border-radius: 5px;
+}
 
+.cn a {
+    color: yellow;
+}
 
+.conme {
+    width: 30%;
+}
 
+.ads h3 {
+    text-align: left;
+}
 
+.goal {
+    padding: 20px;
+}
 
+.tcon {
+    display: flex;
+    justify-content: space-between;
+}
+.fo a {
+    color: white;
+}
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+h5 {
+    text-align: center;
+}
+}
