@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Send A Message</title>
     <style>
          body {
       font-family: Arial, sans-serif;
@@ -22,7 +22,8 @@
       width: 300px;
     }
     input[type="email"],
-    input[type="name"],
+    input[type="tel"],
+    input[type="text"],
     input[type="number"] {
       width: 90%;
       padding: 12px;
@@ -50,28 +51,46 @@
       cursor: pointer;
     }
     </style>
+
+ <link rel="icon" href="elite.logo.png" type="image/x-icon"> 
+      <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8526263059099252"
+     crossorigin="anonymous"></script>
+     <!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-WSQN59WC');</script>
+<!-- End Google Tag Manager -->
 </head>
+
 <body>
+    <!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-WSQN59WC"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
+
+
    <div class="form">
     <div class="logo">
         <img src="pol logo.png" alt="">
     </div>
-    <form action="" class="frm" id="frm" >
-           <input type="name" placeholder="Your Name" required><br>
-           <input type="number" placeholder="Your Matric No" ><br>
-            <input type="name" placeholder="Your Email" required><br>
-            <input type="number" placeholder="Your Mobile No" required><br>
+    <form action="https://formspree.io/f/xojpdgdk" method="POST"  class="frm" id="frm" >
+           <input type="text" name="name" placeholder="Your Name" required><br>
+           <input type="text" name="matric" placeholder="Your Matric No" ><br>
+            <input type="email" name="email" placeholder="Your Email" required><br>
+            <input type="tel" name="mobile" placeholder="Your Mobile No" required><br>
             <br>
-            <input type="hidden" name="_redirect" value="index.html">
-            <textarea name="" id="" cols="35" rows="10" placeholder="MWrite A Message" required></textarea><br>
+          
+            <textarea name="text" id="" cols="37" rows="7" placeholder="MWrite A Message" required></textarea><br>
             <br>
+  
             <input type="submit"value="Send Message" class="submit" id="message">
-            </form>
     </form>
    </div> 
 
    <!--  const form = document.getElementById("frm");
-
+https://politicalscienceelitesfc.netlify.app/
    form.addEventListener("submit", function(e) {
   const inputs = form.querySelectorAll("input[required], textarea[required]");
   let isValid = true;
@@ -88,7 +107,7 @@
   } else {
     alert("Form submitted successfully!");
   }
-});--> 
+});
      <script>
      const form = document.getElementById("frm");
 
@@ -99,10 +118,41 @@
         } else {
             // Form is valid
             alert("Message Sent.");
+            // DO NOT prevent submiission here
         }
     });
 
-    </script>
+    </script> -->
+    <script>
+const form = document.getElementById("frm");
+
+form.addEventListener("submit", function(e) {
+    e.preventDefault(); // stop normal submission
+
+    const data = new FormData(form);
+
+    fetch(form.action, {
+        method: "POST",
+        body: data,
+        headers: {
+            'Accept': 'application/json'
+        }
+    }).then(response => {
+        if (response.ok) {
+            alert("Message sent successfully!");
+            
+            // 🔁 Redirect after success
+        setTimeout (() => {
+            window.location.href = "https://politicalscienceelitesfc.netlify.app";
+        }, 2000);
+        } else {
+            alert("Something went wrong. Try again.");
+        }
+    }).catch(error => {
+        alert("Error submitting form.");
+    });
+});
+</script>
 </body>
 </html>
 
